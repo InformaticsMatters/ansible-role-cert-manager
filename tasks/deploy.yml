@@ -1,0 +1,24 @@
+---
+
+# See https://cert-manager.io/docs/installation/kubernetes/
+
+- name: Sanity check
+  assert:
+    that:
+    - letsencrypt_email is defined
+    - letsencrypt_email != 'SetMe'
+
+- name: Deploy cert-manager
+  k8s:
+    definition: "{{ lookup('file', '{{ item }}.yml') }}"
+    wait: yes
+  loop:
+  - namespace
+  - cert-manager-0-12-0
+
+- name: Deploy ClutserIssuer
+  k8s:
+    definition: "{{ lookup('template', '{{ item }}.yml.j2') }}"
+    wait: yes
+  loop:
+  - clusterissuer

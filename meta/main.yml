@@ -1,0 +1,20 @@
+---
+
+galaxy_info:
+
+  role_name: cert-manager
+  author: Alan B. Christie
+  description: Deploy the cert-manager application to Kubernetes
+  license: Apache 2.0
+  min_ansible_version: 2.9
+
+  platforms:
+  - name: Kubernetes
+    versions:
+    - 1.16
+
+  galaxy_tags:
+  - kubernetes
+  - k8s
+
+dependencies: []

@@ -1,0 +1,15 @@
+---
+
+- name: Deleting namespace
+  k8s:
+    state: absent
+    definition: "{{ lookup('file', 'namespace.yml') }}"
+    wait: yes
+
+- name: Delete ClutserIssuer objects
+  k8s:
+    state: absent
+    definition: "{{ lookup('template', '{{ item }}.yml.j2') }}"
+    wait: yes
+  loop:
+  - clusterissuer

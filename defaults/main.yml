@@ -1,0 +1,8 @@
+---
+
+# To uninstall from the cluster
+# state: absent
+state: present
+
+# Email address used for ACME registration
+letsencrypt_email: SetMe
