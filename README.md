@@ -15,6 +15,9 @@ Role Variables
     # To uninstall from the cluster
     # state: absent
     state: present
+
+    # Email address used for ACME registration
+    letsencrypt_email: SetMe
     
 Dependencies
 ------------
@@ -24,13 +27,15 @@ Dependencies
 Example Playbook
 ----------------
 
-**NOTE** The example below assumes that you have a running Kubernetes|OpenShift
-cluster and that you have sufficient permissions in the `pysimple` namespace.
+**NOTE** The example below assumes that you have a running Kubernetes
+cluster.
 
     - hosts: servers
       tasks:
       - include_role:
           name: informaticsmatters.cert-manager
+        vars:
+          letsencrypt_email: anyone@example.com
 
 License
 -------

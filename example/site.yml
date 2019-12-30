@@ -4,5 +4,3 @@
   tasks:
   - include_role:
       name: informaticsmatters.cert-manager
-    vars:
-      image_tag: '0.12.0'
