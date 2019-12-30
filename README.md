@@ -1,4 +1,4 @@
-Ansible Role - informaticsmatters.cert-manager
+Ansible Role - informaticsmatters.cert_manager
 ==============================================
 
 A Role for the installation of the cert-manager application into a Kubernetes
@@ -33,7 +33,7 @@ cluster.
     - hosts: servers
       tasks:
       - include_role:
-          name: informaticsmatters.cert-manager
+          name: informaticsmatters.cert_manager
         vars:
           letsencrypt_email: anyone@example.com
 
