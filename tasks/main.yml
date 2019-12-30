@@ -12,6 +12,6 @@
 # Go...
 
 - include_tasks: deploy.yml
-  when: state|string is 'present'
+  when: state|string == 'present'
 - include_tasks: undeploy.yml
-  when: state|string is 'absent'
+  when: state|string == 'absent'
