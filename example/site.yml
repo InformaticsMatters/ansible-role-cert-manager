@@ -4,3 +4,5 @@
   tasks:
   - include_role:
       name: informaticsmatters.cert-manager
+    vars:
+      cm_letsencrypt_email: SetMe

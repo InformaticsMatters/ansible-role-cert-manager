@@ -14,10 +14,10 @@ Role Variables
 
     # To uninstall from the cluster
     # state: absent
-    state: present
+    cm_state: present
 
     # Email address used for ACME registration
-    letsencrypt_email: SetMe
+    cm_letsencrypt_email: SetMe
     
 Dependencies
 ------------
@@ -35,7 +35,7 @@ cluster.
       - include_role:
           name: informaticsmatters.cert_manager
         vars:
-          letsencrypt_email: anyone@example.com
+          cm_letsencrypt_email: anyone@example.com
 
 License
 -------

@@ -2,7 +2,7 @@
 
 # To uninstall from the cluster
 # state: absent
-state: present
+cm_state: present
 
 # Email address used for ACME registration
-letsencrypt_email: SetMe
+cm_letsencrypt_email: SetMe

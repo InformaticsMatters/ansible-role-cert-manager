@@ -5,8 +5,8 @@
 - name: Sanity check
   assert:
     that:
-    - letsencrypt_email is defined
-    - letsencrypt_email != 'SetMe'
+    - cm_letsencrypt_email is defined
+    - cm_letsencrypt_email != 'SetMe'
 
 - name: Deploy cert-manager
   k8s:
