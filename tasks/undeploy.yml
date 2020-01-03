@@ -5,11 +5,13 @@
     state: absent
     definition: "{{ lookup('file', 'namespace.yml') }}"
     wait: yes
+    wait_timeout: "{{ cm_wait_timeout }}"
 
 - name: Delete ClutserIssuer objects
   k8s:
     state: absent
     definition: "{{ lookup('template', '{{ item }}.yml.j2') }}"
     wait: yes
+    wait_timeout: "{{ cm_wait_timeout }}"
   loop:
   - clusterissuer

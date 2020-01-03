@@ -15,6 +15,11 @@ Role Variables
     # To uninstall from the cluster
     # state: absent
     cm_state: present
+    # The period of time (seconds) to wait for the cert-manager
+    # to get to the desired state. It may take several minutes for
+    # container initialisation, a period of more than 3 minutes
+    # is recommended.
+    cm_wait_timeout: 360
 
     # Email address used for ACME registration
     cm_letsencrypt_email: SetMe
@@ -36,6 +41,7 @@ cluster.
           name: informaticsmatters.cert_manager
         vars:
           cm_letsencrypt_email: anyone@example.com
+          cm_wait_timeout: 600
 
 License
 -------
