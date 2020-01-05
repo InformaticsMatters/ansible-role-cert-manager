@@ -2,7 +2,7 @@
 kind: ClusterIssuer
 apiVersion: cert-manager.io/v1alpha2
 metadata:
-  name: letsencrypt-staging
+  name: letsencrypt-nginx-staging
 spec:
   acme:
     # The ACME server URL
@@ -11,7 +11,7 @@ spec:
     email: {{ cm_letsencrypt_email }}
     # Name of a secret used to store the ACME account private key
     privateKeySecretRef:
-      name: letsencrypt-staging
+      name: letsencrypt-nginx-staging
     # Enable the HTTP-01 challenge provider
     solvers:
     - http01:
@@ -22,7 +22,7 @@ spec:
 kind: ClusterIssuer
 apiVersion: cert-manager.io/v1alpha2
 metadata:
-  name: letsencrypt-prod
+  name: letsencrypt-nginx-production
 spec:
   acme:
     # The ACME server URL
@@ -31,7 +31,7 @@ spec:
     email: {{ cm_letsencrypt_email }}
     # Name of a secret used to store the ACME account private key
     privateKeySecretRef:
-      name: letsencrypt-prod
+      name: letsencrypt-nginx-production
     # Enable the HTTP-01 challenge provider
     solvers:
     - http01:
