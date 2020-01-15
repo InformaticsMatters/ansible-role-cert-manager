@@ -3,6 +3,6 @@
 - hosts: servers
   tasks:
   - include_role:
-      name: informaticsmatters.cert-manager
+      name: informaticsmatters.cert_manager
     vars:
       cm_letsencrypt_email: SetMe
