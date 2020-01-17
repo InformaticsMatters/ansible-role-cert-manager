@@ -2,7 +2,7 @@
 
 galaxy_info:
 
-  role_name: cert-manager
+  role_name: cert_manager
   author: Alan B. Christie
   description: Deploy the cert-manager application to Kubernetes
   license: Apache 2.0
