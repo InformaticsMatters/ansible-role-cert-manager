@@ -1,6 +1,7 @@
 ---
 
 ignore: |
+  .github/
   files/cert-manager-0-12-0.yml
 
 yaml-files:

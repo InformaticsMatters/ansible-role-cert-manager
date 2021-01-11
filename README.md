@@ -1,7 +1,8 @@
 Ansible Role - informaticsmatters.cert_manager
 ==============================================
 
-[![Build Status](https://travis-ci.com/InformaticsMatters/ansible-role-cert-manager.svg?branch=master)](https://travis-ci.com/InformaticsMatters/ansible-role-cert-manager)
+![lint](https://github.com/InformaticsMatters/ansible-role-cert-manager/workflows/lint/badge.svg)
+
 ![GitHub release (latest by date)](https://img.shields.io/github/v/release/informaticsmatters/ansible-role-cert-manager)
 ![Ansible Role](https://img.shields.io/ansible/role/45879)
 
