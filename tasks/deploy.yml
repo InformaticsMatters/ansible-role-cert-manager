@@ -14,10 +14,9 @@
     wait: yes
     wait_timeout: "{{ cm_wait_timeout }}"
   loop:
-  - namespace
   - cert-manager-0-12-0
 
-- name: Deploy ClutserIssuer
+- name: Deploy ClusterIssuer
   k8s:
     definition: "{{ lookup('template', '{{ item }}.yml.j2') }}"
     wait: yes
