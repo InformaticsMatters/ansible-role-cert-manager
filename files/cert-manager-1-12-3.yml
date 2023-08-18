@@ -5327,10 +5327,10 @@ spec:
         app.kubernetes.io/version: "v1.12.3"
     spec:
       serviceAccountName: cert-manager-cainjector
-      securityContext:
-        runAsNonRoot: true
-        seccompProfile:
-          type: RuntimeDefault
+#      securityContext:
+#        runAsNonRoot: true
+#        seccompProfile:
+#          type: RuntimeDefault
       containers:
         - name: cert-manager-cainjector
           image: "quay.io/jetstack/cert-manager-cainjector:v1.12.3"
@@ -5343,11 +5343,11 @@ spec:
             valueFrom:
               fieldRef:
                 fieldPath: metadata.namespace
-          securityContext:
-            allowPrivilegeEscalation: false
-            capabilities:
-              drop:
-              - ALL
+#          securityContext:
+#            allowPrivilegeEscalation: false
+#            capabilities:
+#              drop:
+#              - ALL
       nodeSelector:
         kubernetes.io/os: linux
 ---
@@ -5384,10 +5384,10 @@ spec:
         prometheus.io/port: '9402'
     spec:
       serviceAccountName: cert-manager
-      securityContext:
-        runAsNonRoot: true
-        seccompProfile:
-          type: RuntimeDefault
+#      securityContext:
+#        runAsNonRoot: true
+#        seccompProfile:
+#          type: RuntimeDefault
       containers:
         - name: cert-manager-controller
           image: "quay.io/jetstack/cert-manager-controller:v1.12.3"
@@ -5405,11 +5405,11 @@ spec:
           - containerPort: 9403
             name: http-healthz
             protocol: TCP
-          securityContext:
-            allowPrivilegeEscalation: false
-            capabilities:
-              drop:
-              - ALL
+#          securityContext:
+#            allowPrivilegeEscalation: false
+#            capabilities:
+#              drop:
+#              - ALL
           env:
           - name: POD_NAMESPACE
             valueFrom:
@@ -5447,10 +5447,10 @@ spec:
         app.kubernetes.io/version: "v1.12.3"
     spec:
       serviceAccountName: cert-manager-webhook
-      securityContext:
-        runAsNonRoot: true
-        seccompProfile:
-          type: RuntimeDefault
+#      securityContext:
+#        runAsNonRoot: true
+#        seccompProfile:
+#          type: RuntimeDefault
       containers:
         - name: cert-manager-webhook
           image: "quay.io/jetstack/cert-manager-webhook:v1.12.3"
@@ -5491,11 +5491,11 @@ spec:
             timeoutSeconds: 1
             successThreshold: 1
             failureThreshold: 3
-          securityContext:
-            allowPrivilegeEscalation: false
-            capabilities:
-              drop:
-              - ALL
+#          securityContext:
+#            allowPrivilegeEscalation: false
+#            capabilities:
+#              drop:
+#              - ALL
           env:
           - name: POD_NAMESPACE
             valueFrom:
